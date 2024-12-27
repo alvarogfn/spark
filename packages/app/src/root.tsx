@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import type { PropsWithChildren } from "react";
+import { useTranslation } from "react-i18next";
 import {
   isRouteErrorResponse,
   Links,
@@ -6,10 +7,23 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from "react-router";
+import { useChangeLanguage } from "remix-i18next/react";
+
+import i18n from "@/i18n/i18n.server";
 
 import type { Route } from "./+types/root";
 import stylesheet from "./styles.css?url";
+
+export async function loader({ request }: Route.LoaderArgs) {
+  const locale = await i18n.getLocale(request);
+  return { locale };
+}
+
+export const handle = {
+  i18n: "common",
+};
 
 export const links: Route.LinksFunction = () => [
   { href: "https://fonts.googleapis.com", rel: "preconnect" },
@@ -19,15 +33,26 @@ export const links: Route.LinksFunction = () => [
     rel: "preconnect",
   },
   {
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap",
     rel: "stylesheet",
   },
   { href: stylesheet, rel: "stylesheet" },
+  {
+    href: "/favicon.ico",
+    rel: "icon",
+    type: "image/x-icon",
+  },
 ];
 
-export function Layout({ children }: { children: ReactNode }) {
+export function Layout({ children }: Readonly<PropsWithChildren>) {
+  const { locale } = useLoaderData<typeof loader>();
+
+  const { i18n } = useTranslation();
+
+  useChangeLanguage(locale);
+
   return (
-    <html lang="en">
+    <html className="dark" dir={i18n.dir()} lang={locale}>
       <head>
         <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />

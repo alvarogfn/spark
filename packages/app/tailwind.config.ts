@@ -4,9 +4,15 @@ import tailwindcss_animate from "tailwindcss-animate";
 export default {
   content: ["./src/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   darkMode: ["class"],
-  plugins: [tailwindcss_animate],
+  plugins: [tailwindcss_animate, tailwindcss_animate],
   theme: {
     extend: {
+      backgroundImage: {
+        promotional: `
+          linear-gradient(#0002, #0002),
+          url('/assets/home-promotional.jpg')
+        `,
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -56,14 +62,14 @@ export default {
       },
       fontFamily: {
         sans: [
-          'Inter"',
+          "Roboto",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
-          'Apple Color Emoji"',
-          'Segoe UI Emoji"',
-          'Segoe UI Symbol"',
-          'Noto Color Emoji"',
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji",
         ],
       },
     },
