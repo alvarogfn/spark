@@ -6,7 +6,9 @@ import {
   Store,
 } from "relay-runtime";
 
-const HTTP_ENDPOINT = "http://localhost:5000/graphql";
+import { env } from "@/config/env";
+
+const HTTP_ENDPOINT = env.PUBLIC_API_BASE;
 
 const fetchFn: FetchFunction = async (request, variables) => {
   const resp = await fetch(HTTP_ENDPOINT, {

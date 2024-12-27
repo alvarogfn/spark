@@ -51,7 +51,7 @@ export default async function handleRequest(
   return new Promise((resolve, reject) => {
     const { abort, pipe } = renderToPipeableStream(
       <I18nextProvider i18n={instance}>
-        <ServerRouter context={routerContext} url={request.url} />,
+        <ServerRouter context={routerContext} url={request.url} />
       </I18nextProvider>,
       {
         onError(error: unknown) {

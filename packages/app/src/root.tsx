@@ -8,6 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
+  useRouteLoaderData,
 } from "react-router";
 import { useChangeLanguage } from "remix-i18next/react";
 
@@ -44,7 +45,7 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
-export function Layout({ children }: Readonly<PropsWithChildren>) {
+export default function App() {
   const { locale } = useLoaderData<typeof loader>();
 
   const { i18n } = useTranslation();
@@ -61,7 +62,7 @@ export function Layout({ children }: Readonly<PropsWithChildren>) {
         <Links />
       </head>
       <body>
-        {children}
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -69,14 +70,15 @@ export function Layout({ children }: Readonly<PropsWithChildren>) {
   );
 }
 
-export default function App() {
-  return <Outlet />;
-}
-
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+export function ErrorBoundary({ error }: Readonly<Route.ErrorBoundaryProps>) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
   let stack: string | undefined;
+
+  const { locale = "" } = useRouteLoaderData<typeof loader>("root") ?? {};
+  const { i18n } = useTranslation();
+
+  useChangeLanguage(locale);
 
   if (isRouteErrorResponse(error)) {
     message = error.status === 404 ? "404" : "Error";
@@ -90,14 +92,27 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
-          <code>{stack}</code>
-        </pre>
-      )}
-    </main>
+    <html className="dark" dir={i18n.dir()} lang={locale}>
+      <head>
+        <meta charSet="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <Meta />
+        <title>Spark</title>
+        <Links />
+      </head>
+      <body>
+        <main className="pt-16 p-4 container mx-auto">
+          <h1>{message}</h1>
+          <p>{details}</p>
+          {stack && (
+            <pre className="w-full p-4 overflow-x-auto">
+              <code>{stack}</code>
+            </pre>
+          )}
+        </main>
+        <ScrollRestoration />
+        <Scripts />
+      </body>
+    </html>
   );
 }
