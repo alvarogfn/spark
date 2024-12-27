@@ -1,0 +1,23 @@
+{
+  "include": ["src", "__mocks__"],
+  "compilerOptions": {
+    "types": ["vitest/globals"],
+    "target": "ESNext",
+    "module": "NodeNext" ,
+    "outDir": "./build" ,
+    "moduleResolution": "NodeNext",
+
+    "lib": ["ESNext"],
+    "strict": true,
+    "baseUrl": "." ,
+    "paths": {
+      "@/*": ["src/*"],
+      "mocks/*": ["__mocks__/*"]
+    },
+
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  }
+}
