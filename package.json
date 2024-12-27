@@ -1,0 +1,51 @@
+{
+  "name": "@spark/core",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "commit": "git-cz",
+    "prepare": "husky",
+    "app:dev": "pnpm --filter @spark/app run dev"
+  },
+  "type": "module",
+  "keywords": [
+    "woovi"
+  ],
+  "author": "@alvarogfn",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.6.1",
+    "@commitlint/config-conventional": "19.6.0",
+    "@eslint/compat": "1.2.4",
+    "@eslint/js": "9.17.0",
+    "@vitest/eslint-plugin": "1.1.20",
+    "commitizen": "4.3.1",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "9.17.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-define-config": "2.1.0",
+    "eslint-import-resolver-typescript": "3.6.3",
+    "eslint-plugin-import-x": "4.6.1",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-n": "17.15.1",
+    "eslint-plugin-perfectionist": "4.4.0",
+    "eslint-plugin-promise": "7.2.1",
+    "eslint-plugin-react": "7.37.2",
+    "eslint-plugin-react-hooks": "5.0.0",
+    "eslint-plugin-react-refresh": "0.4.16",
+    "eslint-plugin-testing-library": "7.1.1",
+    "eslint-plugin-unicorn": "56.0.1",
+    "globals": "15.13.0",
+    "husky": "9.1.7",
+    "prettier": "3.4.2",
+    "typescript-eslint": "8.18.1"
+  }
+}
