@@ -9,7 +9,8 @@
     "start": "cross-env NODE_ENV=production react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
     "preview": "vite preview",
-    "relay": "relay-compiler --watch"
+    "relay": "relay-compiler --watch",
+    "test:browser": "vitest --workspace=vitest.workspace.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "3.9.1",
@@ -50,11 +51,13 @@
     "@types/react-relay": "18.2.0",
     "@types/relay-runtime": "18.2.3",
     "@vitejs/plugin-react": "4.3.4",
+    "@vitest/browser": "2.1.8",
     "@vitest/coverage-istanbul": "2.1.8",
     "@vitest/ui": "2.1.8",
     "autoprefixer": "10.4.20",
     "babel-plugin-relay": "18.2.0",
     "cross-env": "7.0.3",
+    "playwright": "1.49.1",
     "postcss": "8.4.49",
     "prettier": "3.4.2",
     "relay-compiler": "18.2.0",
@@ -64,6 +67,7 @@
     "vite": "5.4.11",
     "vite-plugin-relay": "2.1.0",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "2.1.8"
+    "vitest": "2.1.8",
+    "vitest-browser-react": "0.0.4"
   }
 }

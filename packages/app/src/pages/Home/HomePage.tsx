@@ -1,15 +1,12 @@
-import { useForm } from "react-hook-form";
 import { redirect } from "react-router";
 
 export async function loader() {
-  redirect("/sign-up");
+  return redirect("/sign-up");
 }
 
 function HomePage() {
-  const form = useForm();
-
   return (
-    <div {...form} className="p-5">
+    <div className="p-5">
       <main>home</main>
     </div>
   );

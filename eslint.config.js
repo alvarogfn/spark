@@ -118,24 +118,18 @@ export default defineFlatConfig([
         },
       ],
       "@typescript-eslint/no-wrapper-object-types": "warn",
-
-      "@typescript-eslint/no-restricted-imports": [
-        "warn",
-        {
-          paths: [
-            {
-              name: "@testing-library/react",
-              message: 'Please use "@/testing-library" instead.',
-              allowTypeImports: false,
-            },
-            {
-              name: "react-i18next",
-              message: 'Please use "@/i18n" instead.',
-              allowTypeImports: false,
-            },
-          ],
-        },
-      ],
+      // "@typescript-eslint/no-restricted-imports": [
+      //   "warn",
+      //   {
+      //     paths: [
+      //       {
+      //         name: "@testing-library/react",
+      //         message: 'Please use "@/testing-library" instead.',
+      //         allowTypeImports: false,
+      //       },
+      //     ],
+      //   },
+      // ],
       ...promise.configs["flat/recommended"].rules,
       ...javascript.configs.recommended.rules,
       "no-console": "warn",
@@ -195,6 +189,7 @@ export default defineFlatConfig([
     languageOptions: {
       globals: {
         ...globals.browser,
+        ...globals.node,
         document: "readonly",
         navigator: "readonly",
         window: "readonly",

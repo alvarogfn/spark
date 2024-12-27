@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Form, Link } from "react-router";
 
 import spark from "@/assets/spark.png";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button/button";
 import {
   Card,
   CardContent,

@@ -19,14 +19,11 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
     "@eslint/compat": "1.2.4",
     "@eslint/js": "9.17.0",
-    "@vitest/eslint-plugin": "1.1.20",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "9.17.0",

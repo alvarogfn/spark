@@ -2,7 +2,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Form, Link } from "react-router";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button/button";
 import {
   Card,
   CardContent,
@@ -22,8 +22,6 @@ import type { Route } from "./+types/SignInPage";
 
 export async function clientAction({ request }: Route.ActionArgs) {
   const formData = await request.formData();
-
-  console.log("eae", Object.fromEntries(formData.entries()));
 
   return {};
 }
