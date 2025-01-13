@@ -37,7 +37,7 @@ importers:
         version: 2.1.0
       eslint-import-resolver-typescript:
         specifier: 3.6.3
-        version: 3.6.3(eslint-plugin-import-x@4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2))
+        version: 3.6.3(@typescript-eslint/parser@8.18.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint-plugin-import-x@4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2))
       eslint-plugin-import-x:
         specifier: 4.6.1
         version: 4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
@@ -54,8 +54,8 @@ importers:
         specifier: 7.2.1
         version: 7.2.1(eslint@9.17.0(jiti@2.4.2))
       eslint-plugin-react:
-        specifier: 7.37.2
-        version: 7.37.2(eslint@9.17.0(jiti@2.4.2))
+        specifier: 7.37.4
+        version: 7.37.4(eslint@9.17.0(jiti@2.4.2))
       eslint-plugin-react-hooks:
         specifier: 5.0.0
         version: 5.0.0(eslint@9.17.0(jiti@2.4.2))
@@ -197,7 +197,7 @@ importers:
         version: 2.1.8(@types/node@22.10.2)(playwright@1.49.1)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.2))(vitest@2.1.8)
       '@vitest/coverage-istanbul':
         specifier: 2.1.8
-        version: 2.1.8(vitest@2.1.8(@types/node@22.10.2)(@vitest/browser@2.1.8)(@vitest/ui@2.1.8)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2)))
+        version: 2.1.8(vitest@2.1.8)
       '@vitest/ui':
         specifier: 2.1.8
         version: 2.1.8(vitest@2.1.8)
@@ -245,7 +245,7 @@ importers:
         version: 2.1.8(@types/node@22.10.2)(@vitest/browser@2.1.8)(@vitest/ui@2.1.8)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2))
       vitest-browser-react:
         specifier: 0.0.4
-        version: 0.0.4(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(@vitest/browser@2.1.8(@types/node@22.10.2)(playwright@1.49.1)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.2))(vitest@2.1.8))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(vitest@2.1.8(@types/node@22.10.2)(@vitest/browser@2.1.8)(@vitest/ui@2.1.8)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2)))
+        version: 0.0.4(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(@vitest/browser@2.1.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(vitest@2.1.8)
 
   packages/server:
     dependencies:
@@ -2847,8 +2847,8 @@ packages:
     peerDependencies:
       eslint: '>=8.40'
 
-  eslint-plugin-react@7.37.2:
-    resolution: {integrity: sha512-EsTAnj9fLVr/GZleBLFbj/sSuXeWmp1eXIN60ceYnZveqEaUCyW4X+Vh4WTdUhCkW4xutXYqTXCUSyqD4rB75w==}
+  eslint-plugin-react@7.37.4:
+    resolution: {integrity: sha512-BGP0jRmfYyvOyvMoRX/uoUeW+GqNj9y16bPQzqAHf3AYII/tDs+jMN0dBVkl88/OZwNGwrVFxE7riHsXVfy/LQ==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
@@ -7291,7 +7291,7 @@ snapshots:
       - utf-8-validate
       - vite
 
-  '@vitest/coverage-istanbul@2.1.8(vitest@2.1.8(@types/node@22.10.2)(@vitest/browser@2.1.8)(@vitest/ui@2.1.8)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2)))':
+  '@vitest/coverage-istanbul@2.1.8(vitest@2.1.8)':
     dependencies:
       '@istanbuljs/schema': 0.1.3
       debug: 4.4.0
@@ -8425,13 +8425,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.3(eslint-plugin-import-x@4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2)):
+  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint-plugin-import-x@4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.0
       enhanced-resolve: 5.18.0
       eslint: 9.17.0(jiti@2.4.2)
-      eslint-module-utils: 2.12.0(eslint-import-resolver-typescript@3.6.3(eslint-plugin-import-x@4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2)))(eslint@9.17.0(jiti@2.4.2))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint-plugin-import-x@4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2)))(eslint@9.17.0(jiti@2.4.2))
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.3.0
@@ -8444,12 +8444,13 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.12.0(eslint-import-resolver-typescript@3.6.3(eslint-plugin-import-x@4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2)))(eslint@9.17.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint-plugin-import-x@4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2)))(eslint@9.17.0(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
+      '@typescript-eslint/parser': 8.18.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
       eslint: 9.17.0(jiti@2.4.2)
-      eslint-import-resolver-typescript: 3.6.3(eslint-plugin-import-x@4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.18.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint-plugin-import-x@4.6.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -8534,7 +8535,7 @@ snapshots:
     dependencies:
       eslint: 9.17.0(jiti@2.4.2)
 
-  eslint-plugin-react@7.37.2(eslint@9.17.0(jiti@2.4.2)):
+  eslint-plugin-react@7.37.4(eslint@9.17.0(jiti@2.4.2)):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlast: 1.2.5
@@ -10455,7 +10456,7 @@ snapshots:
 
   resolve@2.0.0-next.5:
     dependencies:
-      is-core-module: 2.16.0
+      is-core-module: 2.16.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
@@ -11152,7 +11153,7 @@ snapshots:
       '@types/node': 22.10.2
       fsevents: 2.3.3
 
-  vitest-browser-react@0.0.4(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(@vitest/browser@2.1.8(@types/node@22.10.2)(playwright@1.49.1)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.2))(vitest@2.1.8))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(vitest@2.1.8(@types/node@22.10.2)(@vitest/browser@2.1.8)(@vitest/ui@2.1.8)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2))):
+  vitest-browser-react@0.0.4(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(@vitest/browser@2.1.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(vitest@2.1.8):
     dependencies:
       '@vitest/browser': 2.1.8(@types/node@22.10.2)(playwright@1.49.1)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.2))(vitest@2.1.8)
       react: 19.0.0
